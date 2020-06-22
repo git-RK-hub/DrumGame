@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body {
+    background:url(img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: Lato;
+    font-weight: 300;
+    position: relative;
+    height: 100vh;
+    color: #555;
+}
+.dropbtn {
+  margin-top: 5px;
+  margin-left : 5px ;
+  width: auto;
+  height : 50px;
+  background-color: rgba(34, 17, 35, 1) ;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+}
+.dropdown {
+  position: relative ;
+  display: inline-block ;
+}
+.showcase {
+    margin: 80px auto 0 400px ;
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    box-shadow: inset 0px 0px 10px 3px yellow;
+    border-radius:0 ; 
+    background-color: rgba(34, 17, 35, 0.7);
+}
+.player {
+    margin: 10px 4px 0 5px ;
+    width :180px;
+    height : 180px ;
+}
+.playerRotate {
+    transform-origin: 50% 50% 0 ;
+    animation: rotate 2.3s infinite linear ; 
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } 
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  width: 300px;
+  margin-left: 5px; 
+  margin-top: 53px;
+  background-color: rgba(34, 17, 35, 0.7);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  height : 200px ;
+  overflow : auto; 
+}
+.dropdown-content menu {
+  color: yellow;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border: 1px solid rgba(34, 17, 35, 1);
+}
+.dropdown-content menu:hover {
+    background-color: rgba(25, 25, 112, 1);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.dropdown:hover .dropbtn {
+    background-color: rgba(25, 25, 112, 1);
+}
+.instruments-panel {
+    margin-top: 100px;
+    width: 920px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    background-color: rgba(0 ,0 , 0, 0.8) ;
+    
+}
+
+.instruments{
+    width: 100px;
+    float: left;
+    margin-right: 2px;
+    height: 100px;
+    padding: 30px;
+    border: 2px solid yellow ;    
+    border-bottom-left-radius: 10px ;
+    border-top-right-radius: 10px ;
+}
+button {
+    position: fixed;
+    width: 100;
+    color: White;
+    text-shadow: 2px solid black ;
+    background: none;
+    border: none;
+    font-family: Lato;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.playing {
+  transform: scale(0.9r);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
+}
+button:hover { font-weight: 600; }
+button:hover i { margin-right: 20px; }
+
+button:focus {
+    outline: none;
+}
